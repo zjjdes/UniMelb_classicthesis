@@ -1,0 +1,75 @@
+%*******************************************************
+% Table of Contents
+%*******************************************************
+\pagestyle{scrheadings}
+
+% \pdfbookmark[0]{\contentsname}{tableofcontents}
+\phantomsection
+\addcontentsline{toc}{chapter}{\contentsname}
+
+\setcounter{tocdepth}{1} % <-- 2 includes up to subsections in the ToC, 1 for up to sections
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\textsc{\thesection}\enspace\spacedlowsmallcaps{#1}}}
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+% \pagestyle{empty} % Uncomment this line if your lists should not have any headlines with section name and page number
+\begingroup
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************
+    % \pdfbookmark[1]{\listfigurename}{lof}
+    \phantomsection
+    \addcontentsline{toc}{section}{\listfigurename}
+    \listoffigures
+
+    \vspace{8ex}
+    \newpage
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    % \pdfbookmark[1]{\listtablename}{lot}
+    \phantomsection
+    \addcontentsline{toc}{section}{\listtablename}
+    
+    \listoftables
+
+    \vspace{8ex}
+    \newpage
+
+    %*******************************************************
+    % List of Listings
+    %*******************************************************
+    \pdfbookmark[1]{\lstlistlistingname}{lol}
+    %\phantomsection
+    %\addcontentsline{toc}{section}{\lstlistlistingname}
+    \lstlistoflistings
+
+    \vspace{8ex}
+    \newpage
+
+    %*******************************************************
+    % Acronyms
+    %*******************************************************
+    \pdfbookmark[1]{Acronyms}{acronyms}
+    %\phantomsection
+    %\addcontentsline{toc}{section}{Acronyms}
+    
+    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+    \chapter*{Acronyms}
+    \begin{acronym}[UMLX]
+        \acro{DRY}{Don't Repeat Yourself}
+        \acro{API}{Application Programming Interface}
+        \acro{UML}{Unified Modeling Language}
+    \end{acronym}
+
+\endgroup

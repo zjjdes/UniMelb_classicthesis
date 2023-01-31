@@ -1,0 +1,44 @@
+%*******************************************************
+% Titlepage
+%*******************************************************
+\begin{titlepage}
+    %\pdfbookmark[1]{\myTitle}{titlepage}
+    % if you want the titlepage to be centered, uncomment and fine-tune the line below (KOMA classes environment)
+    \begin{addmargin}[-1cm]{-3cm}
+    \begin{center}
+        \large
+
+        \hfill
+
+        \vfill
+
+        \begingroup
+            \Large
+            {\color{CTtitle}
+                % \spacedallcaps{ % DZ: commented to abide to UniMelb guidelines
+                \myTitle
+                % }
+            } \\ \bigskip
+        \endgroup
+
+        \spacedlowsmallcaps{
+            \myName \\
+            ORCID: \href{https://orcid.org/}{\myOrcID}
+        }
+
+        \vfill
+
+        Submitted in total fulfillment of the requirements of\\
+        the degree of \myDegree \\ \bigskip \bigskip \bigskip \bigskip
+
+        \myTime \bigskip
+
+        \myDepartment \\ \medskip
+        \myFaculty \\ \medskip
+        \myUni \\ %\bigskip
+
+        \vfill
+
+    \end{center}
+  \end{addmargin}
+\end{titlepage}

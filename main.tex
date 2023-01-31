@@ -1,0 +1,102 @@
+%********************************************************************
+% University of Melbourne PhD thesis template
+% Based on classicthesis
+% Modified according to Preparation of Graduate Research Theses Rules
+% https://gradresearch.unimelb.edu.au/preparing-my-thesis/preparation-of-graduate-research-theses-rules
+% IMPORTANT: if this template is being used for a UniMelb thesis, the link
+% above and the README file must be followed!
+%*******************************************************
+\RequirePackage{silence} % :-\
+    \WarningFilter{scrreprt}{Usage of package `titlesec'}
+    %\WarningFilter{scrreprt}{Activating an ugly workaround}
+    \WarningFilter{titlesec}{Non standard sectioning command detected}
+\documentclass[twoside,%oneside,
+               openright,titlepage,numbers=noenddot,%1headlines,
+               headinclude,footinclude=false,
+               cleardoublepage=empty,
+               %abstract=on,
+               BCOR=5mm,paper=a4,fontsize=11pt
+              ]{scrreprt}
+
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
+\input{classicthesis-config}
+
+%********************************************************************
+% Bibliographies
+%*******************************************************
+\addbibresource{Bibliography.bib}
+\addbibresource[label=ownpubs]{OwnPublications.bib}
+
+%********************************************************************
+% Hyphenation
+%*******************************************************
+%\hyphenation{put special hyphenation here}
+
+% ********************************************************************
+% GO!GO!GO! MOVE IT!
+%*******************************************************
+\begin{document}
+
+\frenchspacing
+\raggedbottom
+\selectlanguage{british} % american ngerman british
+\renewcommand*{\bibname}{Bibliography}
+%\setbibpreamble{}
+\pagenumbering{roman}
+\pagestyle{plain}
+
+%********************************************************************
+% Frontmatter
+%*******************************************************
+\input{FrontBackmatter/Titlepage}
+\input{FrontBackmatter/Titleback}
+\cleardoublepage
+\input{FrontBackmatter/Dedication}
+\cleardoublepage
+\input{FrontBackmatter/Abstract}
+\cleardoublepage
+\input{FrontBackmatter/Declaration}
+\cleardoublepage
+\input{FrontBackmatter/Preface}
+\cleardoublepage
+\input{FrontBackmatter/Acknowledgments}
+\cleardoublepage
+\input{FrontBackmatter/Contents}
+
+%********************************************************************
+% Mainmatter
+%*******************************************************
+\cleardoublepage
+\pagestyle{scrheadings}
+\pagenumbering{arabic}
+%\setcounter{page}{90}
+% use \cleardoublepage here to avoid problems with pdfbookmark
+
+\cleardoublepage
+% \ctparttext{Text under part title}
+% \part{Part 1}\label{pt:pt1}
+\input{Chapters/Introduction/Introduction}
+
+% \cleardoublepage
+% \part{Part 2}\label{pt:pt2}
+% \input{Chapters/chapter}
+
+% ********************************************************************
+% Backmatter
+%*******************************************************
+% Bibliography
+\cleardoublepage
+\input{FrontBackmatter/Bibliography}
+
+% Appendix
+\appendix
+% \renewcommand{\thechapter}{\alph{chapter}}
+\cleardoublepage
+% \part*{Appendix}
+\chapter{}
+
+
+\end{document}
+% ********************************************************************

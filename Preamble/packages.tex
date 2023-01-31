@@ -1,0 +1,113 @@
+% \usepackage[english]{babel} % english, USenglish, american, UKenglish, british, canadian, australian, newzealand
+
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+
+%\usepackage{mathptmx}      % use Times fonts if available on your TeX system
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath} % fleqn
+% \numberwithin{equation}{chapter} % Number equations per chapter
+\usepackage{amssymb}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage[caption=false]{subfig} % font=normalsize,labelfont=sf,textfont=sf
+%\usepackage{epstopdf}      % used only for presentation
+\usepackage{array}
+\usepackage{booktabs}
+%\setlength{\extrarowheight}{3pt}
+\usepackage{balance}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{cprotect}
+\usepackage{csquotes}
+\usepackage{verbatim}
+% \usepackage{listings}
+
+% \usepackage{chngcntr} % Number figures and tables per chapter
+% \counterwithin{figure}{chapter}
+% \counterwithin{table}{chapter}
+
+% \usepackage{lettrine}
+\usepackage{pdfpages}
+
+% Citations
+% \usepackage[round]{natbib}
+% \usepackage{cite}
+% \usepackage[natbibapa]{NJDapacite}
+% \usepackage[natbibapa]{apacite}
+\usepackage[style=apa,backend=biber,natbib=true]{biblatex}
+
+%%%%%%%%%%
+%\usepackage{widetext}
+%\usepackage{flushend}
+%\usepackage{cuted}
+\usepackage{enumitem}
+%%%%%%%%%%
+
+%%%for color citation%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{color}
+% \usepackage{hyperref}
+% \definecolor{darkblue}{rgb}{0.0,0.0,1.0}
+% \definecolor{yell}{rgb}{.8,.9,.0}
+% \hypersetup{colorlinks,breaklinks,
+%   linkcolor=darkblue,urlcolor=darkblue,
+%   anchorcolor=darkblue,citecolor=darkblue}
+%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Added packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{textcomp}
+\usepackage{gensymb} % some symbols
+% \usepackage{subcaption}
+\usepackage{float}
+\usepackage{stfloats}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{bm}
+    \setcounter{MaxMatrixCols}{30} % maximum columns in a matrix
+
+\usepackage{tabularx} % better tables
+    \setlength{\extrarowheight}{3pt} % increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{l}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\usepackage{lineno}
+% \usepackage{epstopdf}
+
+\usepackage[UTF8]{ctex} % Chinese
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%FLOWCHART%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning,shadows,arrows}
+\usetikzlibrary{calc}
+\definecolor{mycolor}{rgb}{0.2,0.2,0.2}
+\definecolor{mygreen}{rgb}{0,0.85,0}
+\tikzstyle{input} = [ellipse,draw=black!15, fill=black!15,text width=2em,scale= 0.8, rotate=90, opacity=.4 ,text centered, rounded corners=1mm, minimum height=3.3em,minimum size=1em]
+\tikzstyle{input2} = [ellipse,draw=green, fill=black!15,text width=2em,scale= 0.85, rotate=90, opacity=.4 ,text centered, rounded corners=1mm, minimum height=3.4em,minimum size=1.2em]
+\tikzstyle{input5} = [ellipse,draw=green, fill=black!15,text width=2em,scale= 0.87, rotate=90, opacity=.4 ,text centered, rounded corners=1mm, minimum height=3.4em,minimum size=1.2em]
+\tikzstyle{input4} = [ellipse,draw=green, fill=black!15,text width=2em,scale= 0.87, rotate=90, opacity=.4 ,text centered, rounded corners=1mm, minimum height=3.4em,minimum size=2.4em]
+\tikzstyle{input3} = [draw,draw=black!30, fill=white,text width=16.4em,scale= 0.9, text centered, rounded corners=1mm, minimum height=.3em,minimum size=1.1em]
+\tikzstyle{input6} = [draw,draw=black, densely dashed,fill=white,text width=17em,scale= 1, opacity=.2, rounded corners=1mm, text centered, minimum height=3em,minimum size=1.1em]
+\tikzstyle{line1} = [draw,  color=green, -latex']
+\tikzstyle{line2} = [draw,  color=black, -latex']
+\tikzstyle{tri} = [draw=black!10, shape border rotate=30, regular polygon, regular polygon sides=3, fill=black!10, scale = .422,node distance=2.5cm, minimum height=2em]
+\tikzstyle{tri1} = [draw=black!10, shape border rotate=30, regular polygon, regular polygon sides=3, fill=black!10, scale = .49,node distance=2.5cm, minimum height=2em]
+\tikzstyle{trm} = [rectangle,draw=white, fill=white,text width=.3em, scale=.5, text centered, minimum height=1em]
+\tikzstyle{crc} = [circle,draw=black!30, fill=white,text width=.3em, scale=.4, text centered, minimum height=1em]
+\tikzstyle{trm1} = [rectangle,thin,draw=black!20, fill=white,text width=2.5em, scale=.5, text centered, minimum height=1em]
+\tikzstyle{trm2} = [ellipse,draw=green!60, fill=black!10,text width=3.3em, scale=.45 ,text centered, rounded corners=1mm, minimum height=1em]
+\tikzstyle{trm3} = [ellipse,draw=green!60, fill=black!10,text width=4em, scale=.45 ,text centered, rounded corners=1mm, minimum height=1em]
+\tikzstyle{trm4} = [ellipse,draw=green!60, fill=black!10,text width=5.5em, scale=.41 ,text centered, rounded corners=1mm, minimum height=1em]
+\tikzstyle{tra} = [rectangle,draw=white, fill=white,text width=6.1em, scale=.5, text centered, minimum height=1em]
+\tikzstyle{tras} = [rectangle,draw=white, fill=white,text width=3em, scale=.5, text centered, minimum height=1em]
+\tikzstyle{trat} = [rectangle,draw=white, fill=white,text width=5em, scale=.5,rotate = 90, minimum height=1em]
+
+\tikzstyle{boxisb} = [draw,draw=red!60, fill=white,text width=6em,scale= 0.9, text centered, minimum height=.3em,minimum size=1.1em]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
